@@ -24,7 +24,7 @@ class Tools:
 		return False
 
 	def append_link(self,file_path,link):
-		#this will add a new link to the provided file at the end of the file
+		#this will add a new link to the provided file at the end of the file 
 		try:
 			file_object = open(file_path,'rb')
 			data = file_object.read()
