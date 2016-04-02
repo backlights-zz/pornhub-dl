@@ -15,7 +15,7 @@ class Download:
                 actual_file_size = int(temp.getheaders("Content-Length")[0])
                 if self.current_file_size >= actual_file_size:                    
                     return True
-                # file is already there and have some data downloaded to it (file-size is present in 'self.current_file_size')
+                # file is already there and have some data downloaded  to it (file-size is present in 'self.current_file_size')
                 req.add_header('Range', 'bytes=%d-' % self.current_file_size)
                 print "[Resuming -- %3.2f MB] : %s"%(self.current_file_size/1048576., self.file_name)
             else:
